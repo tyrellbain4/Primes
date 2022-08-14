@@ -7,6 +7,16 @@ struct PrimeList {
     struct PrimeList* next;
 };
 
+int lessThan5(int num) {
+    if (num < 3) {
+        if (num < 2) {
+            return 0;
+        }
+        return 1;
+    }
+    return 2;
+}
+
 int root_floor(int low, int high, int num) {
 
     if (low == high) return low;
@@ -58,25 +68,19 @@ void free_primes(struct PrimeList* curr) {
     return;
 }
 
-int main() {
+int main(int argc, char** argv) {
 
-    int num = 250000;
+    int num;
 
-    //printf("Enter a number: ");
-    //scanf("%d", &num);
+    if (argc < 2) {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+    }
+    else num = atoi(argv[1]);
 
     if (num < 5) {
         printf("Number of primes: ");
-
-        if (num < 3) {
-            if (num < 2) {
-                printf("0");
-            }
-            else printf("1");
-        }
-        else printf("2");
-
-        printf("\n");
+        printf("%d\n", lessThan5(num));
         return 0;
     }
 
