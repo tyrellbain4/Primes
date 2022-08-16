@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+
+extern int errno;
 
 struct PrimeList {
     int prime;
@@ -60,9 +64,12 @@ void add_prime(struct PrimeList* curr, int new_prime) {
     return;
 }
 
-void free_primes(struct PrimeList* curr) {
+void print_free(FILE* file, struct PrimeList* curr) {
 
-    if (curr->next != NULL) free_primes(curr->next);
+    fprintf(file, "%d", curr->prime);
+    fputs("\n", file);
+
+    if (curr->next != NULL) print_free(file, curr->next);
     free(curr);
     return;
 }
@@ -100,8 +107,21 @@ int main(int argc, char** argv) {
         }
     }
 
+    char* filename = "primes.txt";
+    FILE* file = fopen(filename, "w");
+
+    // file error handling
+    if (file == NULL) {
+        fprintf(stderr, "Errno = %d\n", errno);
+        perror("Error printed by perror");
+        fprintf(stderr, "Error opening file: %s\n", strerror(errno));
+        return 1;
+    }
+
     curr = head;
-    free_primes(curr);
+    print_free(file, curr);
+    printf("Primes written to %s\n", filename);
+    fclose(file);
 
     printf("Number of primes up to %d: %d\n", num, num_primes);
     return 0;
