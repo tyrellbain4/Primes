@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 struct PrimeList {
     int prime;
@@ -21,21 +20,21 @@ int root_floor(int low, int high, int num) {
 
     if (low == high) return low;
 
-    int num_floor = (low+high)/2;
-    int square = pow(num_floor, 2);
+    int mid = (low+high)/2;
+    int square = mid*mid;
 
     if (square > num) {
-        return root_floor(low, num_floor-1, num);
+        return root_floor(low, mid-1, num);
     }
     else if (square < num) {
-        int num_floor_next = num_floor+1;
-        int square_next = pow(num_floor_next, 2);
+        int mid_next = mid+1;
+        int square_next = mid_next*mid_next;
 
-        if (square_next > num) return num_floor;
-        else return root_floor(num_floor_next, high, num);
+        if (square_next > num) return mid;
+        else return root_floor(mid_next, high, num);
     }
 
-    return num_floor;
+    return mid;
 }
 
 int is_prime(struct PrimeList** curr, struct PrimeList** head, int i) {
@@ -78,7 +77,7 @@ int main(int argc, char** argv) {
     }
     else num = atoi(argv[1]);
 
-    printf("Executing primes_fast.c for %d...\n", num);
+    printf("Executing primes_fast.c for n=%d...\n", num);
 
     if (num < 5) {
         printf("Number of primes up to %d: ", num);
