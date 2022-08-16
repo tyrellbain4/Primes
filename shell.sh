@@ -1,21 +1,17 @@
 #!/bin/bash
 
-if [ $# -lt 1 ]
-then
-    read -p "Enter a number: " num
-else
-    num=$1
-fi
-
 make
 printf "\n"
 
 files=(primes_brute.exe primes_fast.exe)
 
-for file in "${files[@]}"
+while IFS= read -r line
 do
-    time ./$file $num
-    printf "\n"
-done
+    for file in "${files[@]}"
+    do
+        time ./$file $line
+        printf "\n"
+    done
+done < "input.txt"
 
 exit 0

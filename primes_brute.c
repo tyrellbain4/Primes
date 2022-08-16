@@ -12,8 +12,6 @@ int is_prime(int n) {
 
 int main(int argc, char** argv) {
 
-    printf("Starting primes_brute.c...\n");
-
     int num;
 
     if (argc < 2) {
@@ -21,6 +19,8 @@ int main(int argc, char** argv) {
         scanf("%d", &num);
     }
     else num = atoi(argv[1]);
+
+    printf("Executing primes_brute.c for %d...\n", num);
 
     int num_primes = 0;
 

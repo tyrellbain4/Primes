@@ -70,8 +70,6 @@ void free_primes(struct PrimeList* curr) {
 
 int main(int argc, char** argv) {
 
-    printf("Start primes_fast.c...\n");
-
     int num;
 
     if (argc < 2) {
@@ -79,6 +77,8 @@ int main(int argc, char** argv) {
         scanf("%d", &num);
     }
     else num = atoi(argv[1]);
+
+    printf("Executing primes_fast.c for %d...\n", num);
 
     if (num < 5) {
         printf("Number of primes up to %d: ", num);

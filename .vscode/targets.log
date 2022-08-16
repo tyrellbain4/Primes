@@ -6,8 +6,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Tue Aug 16 01:48:56 2022
+# Make data base, printed on Tue Aug 16 02:57:15 2022
 
 # Variables
 
@@ -30,7 +31,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 2)
-CFLAGS = -Wall -Werror -g -std=gnu18
+CFLAGS = -Wall -Werror -Wextra -g -std=gnu18 -O3
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
@@ -105,6 +106,7 @@ MFLAGS = -Rrqp
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 XPC_SERVICE_NAME = application.com.microsoft.VSCode.7082771.7082777
+ 
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -132,7 +134,7 @@ LANG = C
 # environment
 VSCODE_PID = 16347
 # variable set hash-table stats:
-# Load=60/1024=6%, Rehash=0, Collisions=1/88=1%
+# Load=60/1024=6%, Rehash=0, Collisions=1/84=1%
 
 # Pattern-specific Variable Values
 
@@ -140,9 +142,9 @@ VSCODE_PID = 16347
 
 # Directories
 
-# . (device 16777220, inode 6733594): 13 files, no impossibilities.
+# . (device 16777220, inode 6733594): 14 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -155,9 +157,9 @@ all: primes_brute.exe primes_fast.exe
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .SUFFIXES:
@@ -168,7 +170,7 @@ all: primes_brute.exe primes_fast.exe
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-16 01:47:02
+#  Last modified 2022-08-16 02:51:36
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -182,14 +184,17 @@ Makefile:
 
 # Not a target:
 primes_fast.c:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-08-16 02:42:22
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 primes_brute.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-16 01:43:25
+#  Last modified 2022-08-16 02:26:35
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -197,42 +202,28 @@ primes_brute.c:
 
 primes_fast.exe: primes_fast.c
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Last modified 2022-08-16 02:42:27
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 10):
 	$(CC) $(CFLAGS) -o primes_fast.exe primes_fast.c
 	
 
 primes_brute.exe: primes_brute.c
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: `'
-#  Last modified 2022-08-12 19:12:56
+#  Last modified 2022-08-16 02:26:42
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := primes_brute.exe
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := primes_brute.c
-# automatic
-# | := 
-# automatic
-# < := primes_brute.c
-# automatic
-# ^ := primes_brute.c
-# automatic
-# ? := primes_brute.c
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 7):
 	$(CC) $(CFLAGS) -o primes_brute.exe primes_brute.c
 	
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/26=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/25=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -244,6 +235,6 @@ primes_brute.exe: primes_brute.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Aug 16 01:48:56 2022
+# Finished Make data base on Tue Aug 16 02:57:15 2022
 
  
