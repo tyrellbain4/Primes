@@ -1,6 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/tyrellb/Documents/Tyrell/Work/GitHub/Primes'
-clang -Wall -Werror -Wextra -g -std=gnu18 -O3 -o primes_brute.exe primes_brute.c
-clang -Wall -Werror -Wextra -g -std=gnu18 -O3 -o primes_fast.exe primes_fast.c
+make: Nothing to be done for `all'.
 make: Leaving directory `/Users/tyrellb/Documents/Tyrell/Work/GitHub/Primes'
  

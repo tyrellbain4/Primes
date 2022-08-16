@@ -1,4 +1,3 @@
-CC=clang
 CFLAGS=-Wall -Werror -Wextra -g -std=gnu18 -O3
 
 all: primes_brute.exe primes_fast.exe

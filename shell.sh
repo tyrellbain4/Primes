@@ -1,6 +1,12 @@
 #!/bin/bash
 
-make
+if [ $# -eq 0 ]
+then
+    read -p "Enter compiler type: " compiler
+else compiler="$1"
+fi
+
+make CC=$compiler
 printf "\n"
 
 files=(primes_brute.exe primes_fast.exe)
