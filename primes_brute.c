@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int is_prime(int n) {
     for (int i=2; i <= n/2; i++) {
@@ -9,9 +10,18 @@ int is_prime(int n) {
     return 1;
 }
 
-int main() {
+int main(int argc, char** argv) {
 
-    int num = 250000;
+    printf("Starting primes_brute.c...\n");
+
+    int num;
+
+    if (argc < 2) {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+    }
+    else num = atoi(argv[1]);
+
     int num_primes = 0;
 
     for (int i=2; i<=num; i++) {
