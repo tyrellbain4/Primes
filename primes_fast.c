@@ -119,7 +119,7 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    fprintf(file, "Primes up to %d:\n", num);
+    fprintf(file, "Primes up to %d: %d\n", num, num_primes);
     curr = head;
     print_free(file, curr);
     printf("Primes successfully written to %s\n", filename);

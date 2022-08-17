@@ -1,4 +1,4 @@
-Primes up to 250000:
+Primes up to 250000: 22044
 3
 5
 7
