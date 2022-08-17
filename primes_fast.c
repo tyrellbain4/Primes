@@ -66,8 +66,7 @@ void add_prime(struct PrimeList* curr, int new_prime) {
 
 void print_free(FILE* file, struct PrimeList* curr) {
 
-    fprintf(file, "%d", curr->prime);
-    fputs("\n", file);
+    fprintf(file, "%d\n", curr->prime);
 
     if (curr->next != NULL) print_free(file, curr->next);
     free(curr);
@@ -107,6 +106,8 @@ int main(int argc, char** argv) {
         }
     }
 
+    printf("Number of primes up to %d: %d\n", num, num_primes);
+
     char* filename = "primes.txt";
     FILE* file = fopen(filename, "w");
 
@@ -118,11 +119,11 @@ int main(int argc, char** argv) {
         return 1;
     }
 
+    fprintf(file, "Primes up to %d:\n", num);
     curr = head;
     print_free(file, curr);
-    printf("Primes written to %s\n", filename);
+    printf("Primes successfully written to %s\n", filename);
     fclose(file);
 
-    printf("Number of primes up to %d: %d\n", num, num_primes);
     return 0;
 }
