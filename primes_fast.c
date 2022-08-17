@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
 
     printf("Number of primes up to %d: %d\n", num, num_primes);
 
-    char* filename = "primes.txt";
+    char* filename = "output.txt";
     FILE* file = fopen(filename, "w");
 
     // file error handling
