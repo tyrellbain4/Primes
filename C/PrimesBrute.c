@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
     }
     else num = atoi(argv[1]);
 
-    printf("Executing primes_brute.c for n=%d...\n", num);
+    printf("Executing PrimesBrute.c for n=%d...\n", num);
 
     int num_primes = 0;
 
@@ -31,3 +31,4 @@ int main(int argc, char** argv) {
     printf("Number of primes up to %d: %d\n", num, num_primes);
     return 0;
 }
+

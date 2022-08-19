@@ -1,24 +1,17 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]
-then
-    read -p "Enter compiler type: " compiler
-else compiler="$1"
-fi
+log=log.txt
 
-make CC=$compiler
-printf "\n"
+printf "Executing all prime algorithms...\n" > $log
 
-files=(primes_brute.exe primes_fast.exe)
+cd C
+./shell.sh $1
+sleep 1
 
-while IFS= read -r line
-do
-    for file in "${files[@]}"
-    do
-        time ./$file $line
-        printf "\n"
-    done
-done < "input.txt"
+cd ../Java/primes
+./shell.sh
+sleep 1
 
-rm *.o
+cd ../..
+printf "All prime algorithms successfully executed.\n" >> $log
 exit 0

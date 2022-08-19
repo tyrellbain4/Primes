@@ -1,0 +1,5 @@
+
+real	0m0.440s
+user	0m0.353s
+sys	0m0.007s
+All prime algorithms successfully executed.

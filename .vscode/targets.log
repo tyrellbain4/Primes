@@ -6,9 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Thu Aug 18 22:03:01 2022
+# Make data base, printed on Fri Aug 19 12:06:19 2022
 
 # Variables
 
@@ -30,10 +29,8 @@ SHELL = /bin/sh
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 1)
-CFLAGS = -ansi -g -O2 -pedantic -std=gnu18 -Wall -Werror -Wextra -DDONT_USE_VOL
-# makefile (from `Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
+# makefile
+MAKEFILE_LIST := 
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
@@ -45,7 +42,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.J4rGFUHhU7/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.rr93Xp6HyX/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -63,7 +60,7 @@ VSCODE_CODE_CACHE_PATH = /Users/tyrellb/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = tyrellb
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -81,7 +78,7 @@ MAKE_VERSION := 3.81
 # environment
 USER = tyrellb
 # makefile
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -129,9 +126,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 31670
+VSCODE_PID = 11104
 # variable set hash-table stats:
-# Load=59/1024=6%, Rehash=0, Collisions=1/83=1%
+# Load=58/1024=6%, Rehash=0, Collisions=1/79=1%
 
 # Pattern-specific Variable Values
 
@@ -139,27 +136,22 @@ VSCODE_PID = 31670
 
 # Directories
 
-# . (device 16777220, inode 6733594): 16 files, 2 impossibilities.
+# . (device 16777220, inode 6733594): 9 files, no impossibilities.
 
-# 16 files, 2 impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-%.exe: %.o
-#  commands to execute (from `Makefile', line 6):
-	$(CC) $(CFLAGS) -o $@ $^
-	
-
-# 1 implicit rules, 0 (0.0%) terminal.
+# No implicit rules.
 
 # Files
 
-all: primes_brute.exe primes_fast.exe
+# Not a target:
+all:
 #  Command-line target.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has been updated.
-#  Successfully updated.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -171,10 +163,21 @@ all: primes_brute.exe primes_fast.exe
 
 # Not a target:
 Makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 22:02:11
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -185,36 +188,30 @@ Makefile:
 #  File has not been updated.
 
 # Not a target:
-primes_fast.exe:
+GNUmakefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 21:50:41
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-primes_brute.exe:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-18 21:50:41
-#  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 1
-# # of strcache buffers: 1
-# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# # of strings in strcache: 0
+# # of strcache buffers: 0
+# strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
+# strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Aug 18 22:03:01 2022
+# Finished Make data base on Fri Aug 19 12:06:19 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+

@@ -62,14 +62,15 @@ void add_prime(PrimeList* curr, int new_prime) {
     newNode->next = NULL;
     curr->next = newNode;
     return;
-    // hehe
 }
 
 void print_free(FILE* file, PrimeList* curr) {
 
     fprintf(file, "%d\n", curr->prime);
 
-    if (curr->next != NULL) print_free(file, curr->next);
+    if (curr->next != NULL) {
+        print_free(file, curr->next);
+    }
     free(curr);
     return;
 }
@@ -84,7 +85,7 @@ int main(int argc, char** argv) {
     }
     else num = atoi(argv[1]);
 
-    printf("Executing primes_fast.c for n=%d...\n", num);
+    printf("Executing PrimesFast.c for n=%d...\n", num);
 
     if (num < 5) {
         printf("Number of primes up to %d: ", num);
@@ -128,3 +129,4 @@ int main(int argc, char** argv) {
 
     return 0;
 }
+
