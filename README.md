@@ -14,3 +14,5 @@ Utilizes a linked list of primes, root limits and prime factorization.
 [4] https://www.youtube.com/watch?v=G5dNorAoeCM&list=PL9IEJIKnBJjEPxenuhKU7J5smY4XjFnyg&index=2
 
 [5] https://www.youtube.com/watch?v=U161zVjv1rs&list=PL9IEJIKnBJjEPxenuhKU7J5smY4XjFnyg&index=3
+
+[6] https://stackoverflow.com/questions/18582205/linkedlist-struct-typedef-in-c
