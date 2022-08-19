@@ -5,10 +5,10 @@
 
 extern int errno;
 
-struct PrimeList {
+typedef struct Node {
     int prime;
-    struct PrimeList* next;
-};
+    struct Node* next;
+} PrimeList;
 
 int lessThan5(int num) {
     if (num < 3) {
@@ -41,7 +41,7 @@ int root_floor(int low, int high, int num) {
     return mid;
 }
 
-int is_prime(struct PrimeList** curr, struct PrimeList** head, int i) {
+int is_prime(PrimeList** curr, PrimeList** head, int i) {
 
     int root = root_floor(2, i/2, i);
 
@@ -53,11 +53,11 @@ int is_prime(struct PrimeList** curr, struct PrimeList** head, int i) {
     return 1;
 }
 
-void add_prime(struct PrimeList* curr, int new_prime) {
+void add_prime(PrimeList* curr, int new_prime) {
 
     while (curr->next != NULL) curr = curr->next;
 
-    struct PrimeList* newNode = (struct PrimeList*)malloc(sizeof(struct PrimeList));
+    PrimeList* newNode = (PrimeList*)malloc(sizeof(PrimeList));
     newNode->prime = new_prime;
     newNode->next = NULL;
     curr->next = newNode;
@@ -65,7 +65,7 @@ void add_prime(struct PrimeList* curr, int new_prime) {
     // hehe
 }
 
-void print_free(FILE* file, struct PrimeList* curr) {
+void print_free(FILE* file, PrimeList* curr) {
 
     fprintf(file, "%d\n", curr->prime);
 
@@ -94,10 +94,10 @@ int main(int argc, char** argv) {
 
     int num_primes = 2;
 
-    struct PrimeList* head = (struct PrimeList*)malloc(sizeof(struct PrimeList));
+    PrimeList* head = (PrimeList*)malloc(sizeof(PrimeList));
     head->prime = 3;
     head->next = NULL;
-    struct PrimeList* curr = NULL;
+    PrimeList* curr = NULL;
 
     for (int i=5; i<=num; i+=2) {
 
