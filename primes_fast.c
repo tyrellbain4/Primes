@@ -62,6 +62,7 @@ void add_prime(struct PrimeList* curr, int new_prime) {
     newNode->next = NULL;
     curr->next = newNode;
     return;
+    // hehe
 }
 
 void print_free(FILE* file, struct PrimeList* curr) {

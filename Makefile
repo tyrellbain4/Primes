@@ -1,9 +1,6 @@
-CFLAGS=-Wall -Werror -Wextra -g -std=gnu18 -O3
+CFLAGS=-ansi -g -O2 -pedantic -std=gnu18 -Wall -Werror -Wextra -DDONT_USE_VOL
 
 all: primes_brute.exe primes_fast.exe
 
-primes_brute.exe: primes_brute.o
-	$(CC) $(CFLAGS) -o primes_brute.exe primes_brute.o
-
-primes_fast.exe: primes_fast.o
-	$(CC) $(CFLAGS) -o primes_fast.exe primes_fast.o
+%.exe: %.o
+	$(CC) $(CFLAGS) -o $@ $^
