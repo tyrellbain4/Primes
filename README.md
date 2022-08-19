@@ -21,10 +21,12 @@ Utilizes a linked list of primes, root limits and prime factorization.
 
 [8]   https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javac.html
 
-[9]  https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html
+[9]   https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html
 
 [10]  https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html
 
-[11]  https://www.geeksforgeeks.org/logger-log-method-in-java-with-examples/
+[11   https://www.geeksforgeeks.org/logger-log-method-in-java-with-examples/
 
-[12]   https://stackoverflow.com/questions/13425309/how-to-stop-java-util-logging-from-formatting-my-numbers
+[12]  https://stackoverflow.com/questions/13425309/how-to-stop-java-util-logging-from-formatting-my-numbers
+
+[13]  https://stackoverflow.com/questions/13176611/bash-script-write-executing-time-in-a-file
