@@ -1,6 +1,9 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/tyrellb/Documents/Tyrell/Work/GitHub/Primes'
-cc -Wall -Werror -Wextra -g -std=gnu18 -O3 -o primes_brute.exe primes_brute.c
-cc -Wall -Werror -Wextra -g -std=gnu18 -O3 -o primes_fast.exe primes_fast.c
+cc -Wall -Werror -Wextra -g -std=gnu18 -O3   -c -o primes_brute.o primes_brute.c
+cc -Wall -Werror -Wextra -g -std=gnu18 -O3 -o primes_brute.exe primes_brute.o
+ 
+cc -Wall -Werror -Wextra -g -std=gnu18 -O3   -c -o primes_fast.o primes_fast.c
+cc -Wall -Werror -Wextra -g -std=gnu18 -O3 -o primes_fast.exe primes_fast.o
 make: Leaving directory `/Users/tyrellb/Documents/Tyrell/Work/GitHub/Primes'
  

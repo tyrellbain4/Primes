@@ -29,4 +29,5 @@ int main(int argc, char** argv) {
     }
 
     printf("Number of primes up to %d: %d\n", num, num_primes);
+    return 0;
 }
