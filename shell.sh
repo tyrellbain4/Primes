@@ -20,4 +20,5 @@ do
     done
 done < "input.txt"
 
+rm *.o
 exit 0
